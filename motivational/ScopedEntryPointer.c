@@ -59,13 +59,12 @@ void traverse(DLL *list) {
 int main() {
 
     DLL *alive = NULL;
-    {
-        DLL *killed = create_list(1);
-        append(killed, 2);
-        append(killed, 3);
-        traverse(killed);
-        alive = killed;
-    }
+    DLL *killed = create_list(1);
+    append(killed, 2);
+    append(killed, 3);
+    traverse(killed);
+    alive = killed;
+    killed = NULL;
 
     append(alive, 4);
     append(alive, 5);
